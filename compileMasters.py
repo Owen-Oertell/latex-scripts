@@ -2,7 +2,7 @@ import os
 import subprocess
 
 os.chdir("/Users/owenoertell/Documents/School/")
-print("Which semester are you adding a class to?")
+print("Which semester are you compiling?")
 
 j = 1
 d = [
@@ -37,4 +37,13 @@ for dir in [
         print(f"Error compiling {dir}")
         continue
     else:
+        # move files to google drive
+        sub2 = subprocess.run(
+            f"cp /Users/owenoertell/Documents/School/{d[semester - 1]}/{dir}/lectures/master.pdf /Users/owenoertell/Library/CloudStorage/GoogleDrive-owen.oertell@gmail.com/My Drive/Notes/{dir}.pdf",
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            shell=True,
+        )
+        if result.returncode != 0:
+            print(f"Error moving {dir}")
         print("done.")

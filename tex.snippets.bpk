@@ -24,7 +24,6 @@ snippet template "Basic template" b
 \usepackage[dutch]{babel}
 \usepackage{amsmath, amssymb}
 
-
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
