@@ -3,7 +3,7 @@ from datetime import datetime
 import sys
 import subprocess
 
-CLASS = "fall2022"
+CLASS = "spring2023"
 
 if len(sys.argv) != 2:
     lectureName = ""

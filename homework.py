@@ -1,11 +1,9 @@
 import subprocess
 import sys
 
-if len(sys.argv) == 1:
-    print("Please provide a directory to add the homework file to.")
-    exit(1)
-
-directory = sys.argv[1]
+directory = "."
+if len(sys.argv) > 1:
+    directory = sys.argv[1]
 if len(sys.argv) > 2:
     addition = sys.argv[2]
 else:
