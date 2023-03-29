@@ -11,8 +11,15 @@ else:
 
 # add the homework.tex file to the directory
 subprocess.run(
-    "cp /Users/owenoertell/Documents/School/notes-scripting/template.tex " +
+    "cp /Users/owenoertell/Documents/School/notes-scripting/neurips_2022.tex " +
     directory + "/" + addition,
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL,
+    shell=True)
+
+subprocess.run(
+    "cp /Users/owenoertell/Documents/School/notes-scripting/neurips_2022.sty " +
+    directory,
     stdout=subprocess.DEVNULL,
     stderr=subprocess.DEVNULL,
     shell=True)
